@@ -1182,3 +1182,168 @@ header {
     .footer-col.identity { grid-column: span 1; }
     .bottom-flex { flex-direction: column; text-align: center; }
 }
+@media (max-width: 768px) {
+    /* --- ضبط الهيدر في الموبايل --- */
+    .navbar {
+        padding: 10px 5%;
+        height: 70px; /* تحديد ارتفاع ثابت للهيدر */
+    }
+
+    .logo img {
+        height: 35px; /* تصغير اللوجو */
+    }
+
+    .logo span {
+        font-size: 1rem; /* تصغير اسم الشركة */
+    }
+
+    /* تحويل زر اتصل الآن لأيقونة موبايل دائرية فقط */
+    .btn-call {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* تحويله لدائرة */
+    }
+
+    .btn-call span {
+        display: none; /* إخفاء كلمة "اتصل الآن" */
+    }
+
+    .btn-call i {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    /* --- ضبط سكشن الهيرو (الرئيسية) --- */
+    .hero-content {
+        padding-top: 120px; /* زيادة المسافة من فوق عشان الكلام ينزل لتحت */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem; /* تصغير حجم العنوان الرئيسي */
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* تصغير حجم البراجراف */
+        line-height: 1.6;
+        margin-bottom: 30px;
+        max-width: 100%; /* يملأ العرض المتاح */
+    }
+
+    /* ضبط الأزرار في الموبايل */
+    .hero-btns {
+        flex-direction: column; /* الأزرار فوق بعض */
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* الزرار ياخد عرض الشاشة */
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    /* --- 1. ضبط سكشن لماذا نحن (Why Choose Us) ليكون في المنتصف --- */
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط كل المحتوى */
+    }
+
+    .central-spine {
+        display: none; /* إخفاء الخط الطولي لأنه يسبب ميلان جهة اليمين في الموبايل */
+    }
+
+    .feature-row {
+        flex-direction: column !important; /* ترتيب العناصر تحت بعض */
+        align-items: center !important;
+        text-align: center !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .feature-content {
+        width: 100% !important; /* تأخذ كامل العرض */
+        margin: 10px 0 40px 0 !important;
+        text-align: center !important;
+    }
+
+    .feature-row::before {
+        display: none; /* إخفاء الخطوط الجانبية الصغيرة */
+    }
+
+    /* --- 2. ضبط سكشن تواصل معنا ليكون في المنتصف --- */
+    .contact-wrapper {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-info-side {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-card {
+        justify-content: center; /* توسيط محتوى كروت الاتصال */
+        text-align: right; /* الحفاظ على اتجاه النص العربي بداخل الكرت */
+    }
+
+    .form-box {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* --- 3. ضبط الفوتر (Footer) ليكون في المنتصف تماماً --- */
+    .footer-grid {
+        grid-template-columns: 1fr !important; /* عمود واحد فقط */
+        text-align: center !important;
+        gap: 40px;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط محتويات كل عمود */
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    /* توسيط الخط الذهبي الصغير تحت العناوين في الفوتر */
+    .footer-col h3::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .footer-about-text {
+        text-align: center;
+    }
+
+    .bottom-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
