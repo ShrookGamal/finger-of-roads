@@ -4,8 +4,6 @@ const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('.nav-links li a');
 const sections = document.querySelectorAll('section[id]');
 let menuOpen = false;
-
-// --- 2. التحكم في القائمة الجانبية (Mobile Menu) ---
 if (menuBtn) {
     menuBtn.addEventListener('click', () => {
         if(!menuOpen) {
@@ -20,7 +18,6 @@ if (menuBtn) {
     });
 }
 
-// إغلاق المنيو عند الضغط على أي رابط
 document.querySelectorAll('.side-nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         menuBtn.classList.remove('open');
@@ -30,11 +27,9 @@ document.querySelectorAll('.side-nav-links a').forEach(link => {
 });
 
 
-// --- 3. الـ Scroll Spy (تغيير الـ Active في الناف بار عند السكرول) ---
 window.addEventListener('scroll', () => {
     let current = "";
 
-    // تغيير خلفية الهيدر
     if (window.scrollY > 50) {
         header.style.background = '#121212';
         header.style.padding = '10px 0';
@@ -43,11 +38,9 @@ window.addEventListener('scroll', () => {
         header.style.padding = '15px 0';
     }
 
-    // تحديد السكشن الظاهر حالياً
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        // 150 هو أوفست عشان التغيير يحصل قبل ما يوصل للسكشن بالظبط (مريح للعين)
         if (pageYOffset >= sectionTop - 150) {
             current = section.getAttribute("id");
         }
@@ -62,7 +55,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-// --- 4. السكرول الناعم (Smooth Scroll) ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -75,10 +67,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-// --- 5. أنيميشن الظهور (Intersection Observers) ---
-
-// أ) أنيميشن الصور في سكشن "من نحن"
 const observerOptions = { threshold: 0.3 };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -92,7 +80,6 @@ const observer = new IntersectionObserver((entries) => {
 const imageBox = document.querySelector('.image-inner');
 if (imageBox) observer.observe(imageBox);
 
-// ب) أنيميشن كروت الخدمات (تأثير المروحة)
 const serviceObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
@@ -111,8 +98,6 @@ document.querySelectorAll('.service-card').forEach(card => {
     serviceObserver.observe(card);
 });
 
-
-// --- 6. تأثير الميلان (Tilt) في سكشن المشاريع ---
 const galleryCards = document.querySelectorAll('.gallery-card');
 galleryCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -130,8 +115,6 @@ galleryCards.forEach(card => {
     });
 });
 
-
-// --- 7. أنيميشن الخط الذهبي (Timeline) ---
 window.addEventListener('scroll', () => {
     const spine = document.querySelector('.central-spine');
     const section = document.querySelector('.why-choose-us');
@@ -148,8 +131,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-// --- 8. فورم اطلب خدمة (Contact Form) ---
 const requestForm = document.getElementById('requestForm');
 if (requestForm) {
     requestForm.addEventListener('submit', function(e) {

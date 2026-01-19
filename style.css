@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #d4af37; /* ذهبي عصري */
+    --primary-color: #d4af37; 
     --dark-bg: #121212;
     --card-bg: #1e1e1e;
     --text-white: #ffffff;
@@ -17,8 +17,6 @@ body {
     background-color: var(--dark-bg);
     overflow-x: hidden;
 }
-
-/* Header & Nav */
 header {
     position: fixed;
     top: 0;
@@ -44,7 +42,7 @@ header {
     gap: 10px;
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .logo img {
@@ -98,8 +96,6 @@ header {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
 }
-
-/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -158,14 +154,11 @@ header {
 
 .btn-primary:hover { background: #fff; }
 .btn-secondary:hover { background: var(--primary-color); border-color: var(--primary-color); color: #000; }
-
-/* Mobile Menu Button */
 .menu-btn {
     display: none;
     cursor: pointer;
 }
 
-/* Side Menu Style */
 .side-menu {
     position: fixed;
     top: -100%;
@@ -373,8 +366,6 @@ header {
     max-width: 1300px;
     margin: 0 auto;
 }
-
-/* الكارت الكرييتف */
 .service-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(212, 175, 55, 0.1); 
@@ -463,8 +454,6 @@ header {
 .service-card:hover .card-footer i {
     transform: translateX(-10px);
 }
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
@@ -475,7 +464,7 @@ header {
 }
 .projects-clean {
     padding: 100px 5%;
-    background-color: #d5d7d9; /* خلفية فاتحة جداً ونظيفة */
+    background-color: #d5d7d9; 
 }
 
 .section-intro {
@@ -496,8 +485,6 @@ header {
     color: #222;
     font-size: 3rem;
 }
-
-/* الشبكة المنظمة */
 .gallery-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -512,7 +499,7 @@ header {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* ظل خفيف جداً */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
     transition: all 0.5s ease;
     border: 1px solid #eee;
 }
@@ -523,19 +510,15 @@ header {
     object-fit:cover;
     transition: 0.8s ease;
 }
-
-/* تأثير الـ Hover الراقي */
 .gallery-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); /* توهج ذهبي خفيف */
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); 
     border-color: var(--gold);
 }
 
 .gallery-card:hover img {
     transform: scale(1.05);
 }
-
-/* ستايل خاص للفيديوهات */
 .video-card .play-hint {
     position: absolute;
     top: 20px;
@@ -555,11 +538,9 @@ header {
 .video-card video {
     cursor: pointer;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
     .gallery-wrapper {
-        grid-template-columns: 1fr; /* في الموبايل تحت بعض بشكل منظم */
+        grid-template-columns: 1fr; 
     }
     .gallery-card {
         height: 300px;
@@ -567,7 +548,7 @@ header {
 }
 .why-choose-us {
     padding: 100px 5%;
-    background: linear-gradient(to bottom, #232323, #1a1a1a); /* خلفية داكنة فخمة */
+    background: linear-gradient(to bottom, #232323, #1a1a1a); 
     position: relative;
     overflow: hidden;
 }
@@ -591,8 +572,6 @@ header {
     font-size: 2.5rem;
     margin-top: 20px;
 }
-
-/* المسار المركزي المتحرك */
 .timeline-container {
     position: relative;
     max-width: 1000px;
@@ -617,8 +596,6 @@ header {
     box-shadow: 0 0 15px var(--gold);
     transition: 2s ease;
 }
-
-/* صفوف المميزات */
 .feature-row {
     display: flex;
     align-items: center;
@@ -685,8 +662,6 @@ header {
 
 .feature-row.left::before { left: 80px; }
 .feature-row.right::before { right: 80px; }
-
-/* Responsive */
 @media (max-width: 850px) {
     .central-spine { left: 20px; }
     .feature-row { flex-direction: row !important; justify-content: flex-start !important; padding-right: 40px; }
@@ -695,7 +670,7 @@ header {
 }
 .blog-section {
     padding: 100px 5%;
-    background-color: #ffffff; /* خلفية بيضاء لراحة القراءة */
+    background-color: #ffffff; 
 }
 
 .section-header {
@@ -788,7 +763,6 @@ header {
     font-size: 0.95rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    /* تحديد عدد الأسطر الظاهرة */
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -811,8 +785,6 @@ header {
 .read-more-btn:hover {
     gap: 15px;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
     .blog-grid {
         grid-template-columns: 1fr;
@@ -821,7 +793,6 @@ header {
 .contact-section {
     padding: 100px 5%;
     position: relative;
-    /* مسار الصورة الخاص بك */
     background: url('images/pexels-tomfisk-12267903.jpg') no-repeat center center/cover;
     background-attachment: fixed; 
     color: white;
@@ -835,12 +806,10 @@ header {
     left: 0; 
     width: 100%; 
     height: 100%;
-    background: rgba(18, 18, 18, 0.7); /* قللت التعتيم شوية عشان البلور يظهر جماله */
+    background: rgba(18, 18, 18, 0.7); 
     z-index: 2;
-    
-    /* --- إضافة تأثير البلور هنا --- */
-    backdrop-filter: blur(3px); /* قوة التغبيش، يمكنك زيادتها لـ 15px لو تريديها أقوى */
-    -webkit-backdrop-filter: blur(10px); /* ضروري لدعم متصفحات Safari */
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 
@@ -857,8 +826,6 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
-
-/* الجانب الأيمن: المعلومات */
 .contact-info-side {
     flex: 1;
     min-width: 350px;
@@ -914,7 +881,7 @@ header {
 }
 
 .whatsapp .info-icon {
-    background: #25d366; /* لون واتساب الأصلي */
+    background: #25d366; 
     color: white;
 }
 
@@ -927,8 +894,6 @@ header {
 .info-text strong {
     font-size: 1.2rem;
 }
-
-/* الجانب الأيسر: الفورم */
 .contact-form-side {
     flex: 1;
     min-width: 350px;
@@ -997,7 +962,6 @@ header {
     gap: 25px;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .contact-wrapper { flex-direction: column; }
     .contact-info-side, .contact-form-side { width: 100%; }
@@ -1017,8 +981,6 @@ header {
     max-width: 1300px;
     margin: 0 auto;
 }
-
-/* العمود الأول */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -1068,8 +1030,6 @@ header {
     color: #000;
     transform: translateY(-5px);
 }
-
-/* العناوين */
 .footer-col h3 {
     color: #fff;
     font-size: 1.3rem;
@@ -1085,8 +1045,6 @@ header {
     width: 40px; height: 2px;
     background: var(--gold);
 }
-
-/* الروابط */
 .quick-links ul {
     list-style: none;
     padding: 0;
@@ -1107,8 +1065,6 @@ header {
     color: var(--gold);
     padding-right: 10px;
 }
-
-/* التواصل */
 .contact-item {
     display: flex;
     align-items: center;
@@ -1127,7 +1083,6 @@ header {
     font-size: 0.95rem;
 }
 
-/* الجزء السفلي */
 .footer-bottom {
     margin-top: 60px;
     text-align: center;
@@ -1170,8 +1125,6 @@ header {
     color: #fff;
     border-color: #fff;
 }
-
-/* Responsive */
 @media (max-width: 992px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .footer-col.identity { grid-column: span 2; }
@@ -1183,21 +1136,18 @@ header {
     .bottom-flex { flex-direction: column; text-align: center; }
 }
 @media (max-width: 768px) {
-    /* --- ضبط الهيدر في الموبايل --- */
     .navbar {
         padding: 10px 5%;
-        height: 70px; /* تحديد ارتفاع ثابت للهيدر */
+        height: 70px; 
     }
 
     .logo img {
-        height: 35px; /* تصغير اللوجو */
+        height: 35px; 
     }
 
     .logo span {
-        font-size: 1rem; /* تصغير اسم الشركة */
+        font-size: 1rem; 
     }
-
-    /* تحويل زر اتصل الآن لأيقونة موبايل دائرية فقط */
     .btn-call {
         width: 40px;
         height: 40px;
@@ -1205,11 +1155,11 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%; /* تحويله لدائرة */
+        border-radius: 50%; 
     }
 
     .btn-call span {
-        display: none; /* إخفاء كلمة "اتصل الآن" */
+        display: none; 
     }
 
     .btn-call i {
@@ -1220,54 +1170,50 @@ header {
     .nav-actions {
         gap: 10px;
     }
-
-    /* --- ضبط سكشن الهيرو (الرئيسية) --- */
     .hero-content {
-        padding-top: 120px; /* زيادة المسافة من فوق عشان الكلام ينزل لتحت */
+        padding-top: 120px; 
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .hero-content h1 {
-        font-size: 1.7rem; /* تصغير حجم العنوان الرئيسي */
+        font-size: 1.7rem; 
         margin-bottom: 15px;
         line-height: 1.4;
     }
 
     .hero-content p {
-        font-size: 0.9rem; /* تصغير حجم البراجراف */
+        font-size: 0.9rem; 
         line-height: 1.6;
         margin-bottom: 30px;
-        max-width: 100%; /* يملأ العرض المتاح */
+        max-width: 100%; 
     }
 
-    /* ضبط الأزرار في الموبايل */
     .hero-btns {
-        flex-direction: column; /* الأزرار فوق بعض */
+        flex-direction: column; 
         gap: 15px;
         width: 100%;
     }
 
     .btn-primary, .btn-secondary {
-        width: 100%; /* الزرار ياخد عرض الشاشة */
+        width: 100%; 
         padding: 12px;
         font-size: 0.9rem;
     }
 }
 @media (max-width: 768px) {
-    /* --- 1. ضبط سكشن لماذا نحن (Why Choose Us) ليكون في المنتصف --- */
     .timeline-container {
         display: flex;
         flex-direction: column;
-        align-items: center; /* توسيط كل المحتوى */
+        align-items: center; 
     }
 
     .central-spine {
-        display: none; /* إخفاء الخط الطولي لأنه يسبب ميلان جهة اليمين في الموبايل */
+        display: none; 
     }
 
     .feature-row {
-        flex-direction: column !important; /* ترتيب العناصر تحت بعض */
+        flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
         padding: 0 !important;
@@ -1275,16 +1221,14 @@ header {
     }
 
     .feature-content {
-        width: 100% !important; /* تأخذ كامل العرض */
+        width: 100% !important; 
         margin: 10px 0 40px 0 !important;
         text-align: center !important;
     }
 
     .feature-row::before {
-        display: none; /* إخفاء الخطوط الجانبية الصغيرة */
+        display: none; 
     }
-
-    /* --- 2. ضبط سكشن تواصل معنا ليكون في المنتصف --- */
     .contact-wrapper {
         flex-direction: column;
         text-align: center;
@@ -1297,18 +1241,16 @@ header {
     }
 
     .info-card {
-        justify-content: center; /* توسيط محتوى كروت الاتصال */
-        text-align: right; /* الحفاظ على اتجاه النص العربي بداخل الكرت */
+        justify-content: center; 
+        text-align: right; 
     }
 
     .form-box {
         width: 100%;
         margin: 0 auto;
     }
-
-    /* --- 3. ضبط الفوتر (Footer) ليكون في المنتصف تماماً --- */
     .footer-grid {
-        grid-template-columns: 1fr !important; /* عمود واحد فقط */
+        grid-template-columns: 1fr !important; 
         text-align: center !important;
         gap: 40px;
     }
@@ -1316,7 +1258,7 @@ header {
     .footer-col {
         display: flex;
         flex-direction: column;
-        align-items: center; /* توسيط محتويات كل عمود */
+        align-items: center; 
     }
 
     .footer-logo {
@@ -1330,8 +1272,6 @@ header {
     .contact-item {
         justify-content: center;
     }
-
-    /* توسيط الخط الذهبي الصغير تحت العناوين في الفوتر */
     .footer-col h3::after {
         right: 50%;
         transform: translateX(50%);
@@ -1348,14 +1288,10 @@ header {
     }
 }
 @media (max-width: 768px) {
-    /* --- 1. تنظيف الهيدر وتوسيط العناصر --- */
     
-    /* إخفاء زر اتصل الآن تماماً في الموبايل */
     .btn-call {
         display: none !important;
     }
-
-    /* ضبط الناف بار ليكون اللوجو والمنيو على خط واحد */
     .navbar {
         display: flex !important;
         justify-content: space-between !important;
@@ -1363,8 +1299,6 @@ header {
         padding: 10px 5% !important;
         height: 80px !important;
     }
-
-    /* التأكد من أن التلات شرطات (المنيو) في نفس مستوى اللوجو */
     .menu-btn {
         margin: 0 !important;
         display: flex !important;
@@ -1376,13 +1310,10 @@ header {
     }
 
     .logo span {
-        font-size: 1.1rem !important; /* صغرنا الاسم عشان ميزحمش الدنيا */
-    }
-
-    /* --- 2. ضبط سكشن الهيرو (الرئيسية) من البداية --- */
-    
+        font-size: 1.1rem !important; 
+    }    
     .hero {
-        padding-top: 120px !important; /* مسافة كافية عشان الكلام يبدأ تحت الهيدر */
+        padding-top: 120px !important; 
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1394,20 +1325,17 @@ header {
     }
 
     .hero-content h1 {
-        font-size: 1.8rem !important; /* حجم مناسب للموبايل */
+        font-size: 1.8rem !important; 
         margin-bottom: 20px !important;
     }
 
     .hero-content p {
         font-size: 0.95rem !important;
         margin-bottom: 35px !important;
-    }
-
-    /* --- 3. توسيط سكشن تواصل معنا (المعلومات والكارد) --- */
-    
+    }    
     .contact-wrapper {
-        flex-direction: column !important; /* العناصر تحت بعض */
-        align-items: center !important; /* توسيط السكشن ككل */
+        flex-direction: column !important; 
+        align-items: center !important; 
         text-align: center !important;
         gap: 40px !important;
     }
@@ -1416,30 +1344,26 @@ header {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* توسيط الكلام في النص */
+        align-items: center !important; 
     }
 
     .info-items {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* توسيط كروت التواصل */
+        align-items: center !important; 
     }
 
     .info-card {
         width: 100% !important;
-        max-width: 380px !important; /* حجم مناسب للكارت */
-        justify-content: center !important; /* توسيط المحتوى جوه الكارت */
+        max-width: 380px !important; 
+        justify-content: center !important; 
         margin-bottom: 15px !important;
     }
-
     .contact-form-side {
         width: 100% !important;
         max-width: 500px !important;
     }
-
-    /* --- 4. توسيط الفوتر تماماً --- */
-    
     .footer-grid {
         grid-template-columns: 1fr !important;
         text-align: center !important;
@@ -1448,7 +1372,7 @@ header {
     .footer-col {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* توسيط كل محتوى الفوتر */
+        align-items: center !important; 
         margin-bottom: 30px !important;
     }
 
@@ -1464,5 +1388,86 @@ header {
     .bottom-flex {
         flex-direction: column !important;
         gap: 15px !important;
+    }
+}
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        padding: 0 !important;
+    }
+
+    .navbar {
+        width: 100% !important;
+        padding: 10px 5% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+    .contact-section {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .contact-wrapper {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;   
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .contact-info-side, .contact-form-side {
+        width: 90% !important; 
+        margin: 0 auto 40px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; 
+    }
+
+    .info-items {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; 
+    }
+
+    .info-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important; 
+        box-sizing: border-box !important;
+    }
+    .hero {
+        padding-top: 120px !important; 
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
     }
 }

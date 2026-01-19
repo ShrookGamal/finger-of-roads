@@ -23,7 +23,6 @@
             line-height: 1.8; 
         }
 
-        /* --- Header المطور --- */
         header { 
             background: var(--dark); 
             padding: 15px 8%; 
@@ -31,7 +30,7 @@
             justify-content: space-between; 
             align-items: center; 
             color: white;
-            position: fixed; /* تثبيت الهيدر في الأعلى */
+            position: fixed; 
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -42,11 +41,11 @@
         .logo-box {
             display: flex;
             align-items: center;
-            gap: 15px; /* مسافة بين اللوجو والاسم */
+            gap: 15px; 
         }
 
         .logo-box img {
-            height: 55px; /* حجم اللوجو */
+            height: 55px;
             border-radius: 8px;
             object-fit: contain;
         }
@@ -73,24 +72,23 @@
             color: black; 
         }
 
-        /* --- تصميم المقال --- */
         .article-wrapper { 
             max-width: 1300px; 
-            margin: 150px auto 80px; /* المسافة 150px تمنع التصاقه بالهيدر */
+            margin: 150px auto 80px; 
             padding: 0 5%; 
             display: flex; 
-            gap: 60px; /* مسافة بين الكلام والصورة */
-            align-items: flex-start; /* يجعلهم يبدأون من نفس المستوى */
+            gap: 60px; 
+            align-items: flex-start; 
         }
 
         .article-text { 
-            flex: 1.4; /* النص يأخذ مساحة أكبر قليلاً */
+            flex: 1.4; 
         }
 
         .article-visual { 
             flex: 1; 
             position: sticky; 
-            top: 130px; /* يبقى ظاهراً أثناء النزول */
+            top: 130px; 
         }
 
         .article-visual img { 
@@ -139,7 +137,6 @@
             border-radius: 0 15px 15px 0;
         }
 
-        /* التجاوب مع الموبايل */
         @media (max-width: 992px) {
             .article-wrapper { 
                 flex-direction: column; 
@@ -147,7 +144,7 @@
             }
             .article-visual { 
                 position: static; 
-                order: -1; /* الصورة تظهر فوق النص في الموبايل */
+                order: -1; 
                 width: 100%;
             }
             h1 { font-size: 2rem; }
@@ -159,21 +156,18 @@
     <header>
         <div class="logo-box">
             <img src="images/WhatsApp_Image_2025-06-14_at_18.56.02_46024ec9-removebg-preview-1.png" alt="لوجو أنامل الطرق">
-            <span>أنامل الطرق</span>
+            <span>أنامل الطرق الحديثة</span>
         </div>
         <a href="index.html#blog" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للمدونة</a>
     </header>
 
     <main class="article-wrapper">
-        <!-- قسم النص -->
         <div class="article-text">
             <h1 id="article-title">جاري التحميل...</h1>
             <div id="article-body" class="content-body">
-                <!-- المحتوى سيتم حقنه هنا -->
             </div>
         </div>
 
-        <!-- قسم الصورة -->
         <div class="article-visual">
             <img id="article-img" src="" alt="صورة توضيحية للمشروع">
         </div>
@@ -182,7 +176,6 @@
     <div class="container">
         <div class="footer-grid">
             
-            <!-- العمود الأول: الهوية -->
             <div class="footer-col identity">
                 <div class="footer-logo">
                     <img src="images/WhatsApp_Image_2025-06-14_at_18.56.02_46024ec9-removebg-preview-1.png" alt="لوجو أنامل الطرق">
@@ -196,7 +189,6 @@
                 </div>
             </div>
 
-            <!-- العمود الثاني: روابط سريعة -->
             <div class="footer-col quick-links">
                 <h3>روابط سريعة</h3>
                 <ul>
@@ -209,7 +201,6 @@
                 </ul>
             </div>
 
-            <!-- العمود الثالث: التواصل -->
             <div class="footer-col footer-contact">
                 <h3>بيانات التواصل</h3>
                 <div class="contact-item">
@@ -232,11 +223,10 @@
 
         </div>
 
-        <!-- الجزء السفلي: الحقوق والبرمجة -->
         <div class="footer-bottom">
             <hr class="footer-divider">
             <div class="bottom-flex">
-                <p class="copyright">جميع الحقوق محفوظة © 2026 لشركة أنامل الطرق للمقاولات العامة</p>
+                <p class="copyright">جميع الحقوق محفوظة © 2026 لشركة أنامل الطرق الحديثة للاسفلت</p>
                 <p class="developer">
                     تصميم وبرمجة 
                     <a href="https://www.facebook.com/share/17UzqgSwiu/" target="_blank">GMTWeb</a>
@@ -247,7 +237,6 @@
 </footer>
 
     <script>
-        // مخزن البيانات (Data)
         const articlesData = [
             {
                 title: "أهمية مشاريع الطرق في دعم التنمية المستدامة",
@@ -281,7 +270,6 @@
             }
         ];
 
-        // جلب المعرف من الرابط
         const urlParams = new URLSearchParams(window.location.search);
         const articleId = urlParams.get('id');
 
