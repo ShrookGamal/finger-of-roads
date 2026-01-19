@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المقال - أنامل الطرق</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { 
+            --gold: #d4af37; 
+            --dark: #121212; 
+            --text-gray: #555; 
+            --bg-light: #fdfdfd;
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            margin: 0; 
+            background: var(--bg-light); 
+            color: #333; 
+            line-height: 1.8; 
+        }
+
+        /* --- Header المطور --- */
+        header { 
+            background: var(--dark); 
+            padding: 15px 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            color: white;
+            position: fixed; /* تثبيت الهيدر في الأعلى */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* مسافة بين اللوجو والاسم */
+        }
+
+        .logo-box img {
+            height: 55px; /* حجم اللوجو */
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .logo-box span {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        .back-btn { 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border: 1px solid var(--gold); 
+            padding: 10px 25px; 
+            border-radius: 50px; 
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .back-btn:hover { 
+            background: var(--gold); 
+            color: black; 
+        }
+
+        /* --- تصميم المقال --- */
+        .article-wrapper { 
+            max-width: 1300px; 
+            margin: 150px auto 80px; /* المسافة 150px تمنع التصاقه بالهيدر */
+            padding: 0 5%; 
+            display: flex; 
+            gap: 60px; /* مسافة بين الكلام والصورة */
+            align-items: flex-start; /* يجعلهم يبدأون من نفس المستوى */
+        }
+
+        .article-text { 
+            flex: 1.4; /* النص يأخذ مساحة أكبر قليلاً */
+        }
+
+        .article-visual { 
+            flex: 1; 
+            position: sticky; 
+            top: 130px; /* يبقى ظاهراً أثناء النزول */
+        }
+
+        .article-visual img { 
+            width: 100%; 
+            border-radius: 25px; 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1); 
+            border: 5px solid white;
+        }
+
+        h1 { 
+            color: var(--dark); 
+            font-size: 2.8rem; 
+            margin-bottom: 30px; 
+            line-height: 1.4;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 5px;
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .content-body p { 
+            font-size: 1.2rem; 
+            color: var(--text-gray);
+            margin-bottom: 25px; 
+            text-align: justify; 
+        }
+
+        .quote-box { 
+            background: #fff; 
+            border-right: 6px solid var(--gold); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-size: 1.3rem;
+            color: var(--dark);
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            border-radius: 0 15px 15px 0;
+        }
+
+        /* التجاوب مع الموبايل */
+        @media (max-width: 992px) {
+            .article-wrapper { 
+                flex-direction: column; 
+                margin-top: 120px;
+            }
+            .article-visual { 
+                position: static; 
+                order: -1; /* الصورة تظهر فوق النص في الموبايل */
+                width: 100%;
+            }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="images/WhatsApp_Image_2025-06-14_at_18.56.02_46024ec9-removebg-preview-1.png" alt="لوجو أنامل الطرق">
+            <span>أنامل الطرق</span>
+        </div>
+        <a href="index.html#blog" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للمدونة</a>
+    </header>
+
+    <main class="article-wrapper">
+        <!-- قسم النص -->
+        <div class="article-text">
+            <h1 id="article-title">جاري التحميل...</h1>
+            <div id="article-body" class="content-body">
+                <!-- المحتوى سيتم حقنه هنا -->
+            </div>
+        </div>
+
+        <!-- قسم الصورة -->
+        <div class="article-visual">
+            <img id="article-img" src="" alt="صورة توضيحية للمشروع">
+        </div>
+    </main>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <!-- العمود الأول: الهوية -->
+            <div class="footer-col identity">
+                <div class="footer-logo">
+                    <img src="images/WhatsApp_Image_2025-06-14_at_18.56.02_46024ec9-removebg-preview-1.png" alt="لوجو أنامل الطرق">
+                    <span>أنامل الطرق</span>
+                </div>
+                <p class="footer-about-text">
+                    نحن في شركة أنامل الطرق للمقاولات العامة، نضع خبراتنا الطويلة وأحدث تقنياتنا الهندسية لنبني طرقاً تخدم المستقبل وتساهم في نهضة البنية التحتية للمملكة العربية السعودية وفق رؤية 2030.
+                </p>
+                <div class="social-links">
+                    <a href="https://wa.me/966577685689" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة -->
+            <div class="footer-col quick-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html#home">الرئيسية</a></li>
+                    <li><a href="index.html#about">من نحن</a></li>
+                    <li><a href="index.html#services">خدماتنا</a></li>
+                    <li><a href="index.html#projects">مشاريعنا</a></li>
+                    <li><a href="index.html#why-us">لماذا تختارنا</a></li>
+                    <li><a href="index.html#blog">المدونة</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: التواصل -->
+            <div class="footer-col footer-contact">
+                <h3>بيانات التواصل</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>0577685689</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>0577685689</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>السعودية - جدة - حي الفيصلية</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@anamel-roads.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- الجزء السفلي: الحقوق والبرمجة -->
+        <div class="footer-bottom">
+            <hr class="footer-divider">
+            <div class="bottom-flex">
+                <p class="copyright">جميع الحقوق محفوظة © 2026 لشركة أنامل الطرق للمقاولات العامة</p>
+                <p class="developer">
+                    تصميم وبرمجة 
+                    <a href="https://www.facebook.com/share/17UzqgSwiu/" target="_blank">GMTWeb</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // مخزن البيانات (Data)
+        const articlesData = [
+            {
+                title: "أهمية مشاريع الطرق في دعم التنمية المستدامة",
+                image: "images/1599-768x509.webp",
+                content: `
+                    <p>تُعد مشاريع الطرق واحدة من أهم المحركات التي تساهم في تحقيق التنمية الشاملة والمستدامة في أي دولة. فوجود شبكة طرق متطورة وفعّالة ينعكس بشكل مباشر على مختلف القطاعات الاقتصادية، مثل التجارة، والنقل، والسياحة، والصناعة.</p>
+                    <div class="quote-box">"إن جودة الطرق هي المقياس الحقيقي لنهضة الأمم وقوة بنيتها التحتية."</div>
+                    <p>فوجود شبكة طرق متطورة يسهل على الأفراد والمؤسسات الوصول إلى الأسواق والمرافق، ويقلل من الوقت والجهد المبذول في التنقل. إن أهمية الطرق لا تتوقف عند كونها وسيلة نقل، بل تتعدى ذلك لتكون أداة استراتيجية في تخطيط المدن الحديثة، وتحقيق التوازن الجغرافي في التنمية، وربط المناطق النائية بالمراكز الحيوية.</p>
+                    <p>وفي ظل التحديات الحالية، أصبح لزامًا على شركات المقاولات تبني مفاهيم جديدة مثل الطرق الذكية، والمواد الصديقة للبيئة، والتصميم المرن الذي يتحمل التغيرات المناخية. استخدام طبقات الإسفلت المعاد تدويرها، أو اعتماد تقنيات تقليل استهلاك الطاقة أثناء العمل، أصبح أمرًا يعكس مدى تطور الشركة والتزامها بالمسؤولية المجتمعية.</p>
+                `
+            },
+            {
+                title: "كيف تضمن شركة المقاولات جودة تنفيذ مشاريع الطرق؟",
+                image: "images/2151307823-768x506.webp",
+                content: `
+                    <p>إن تنفيذ مشاريع الطرق يتطلب دقة عالية في كل مرحلة، بدءًا من الدراسة الأولية وحتى تسليم المشروع النهائي. وتدرك شركات المقاولات المحترفة أن جودة الطريق تعتمد على عوامل هندسية وفنية عميقة تضمن المتانة والسلامة.</p>
+                    <p>تبدأ الرحلة بإجراء دراسة جيولوجية شاملة للتربة، لمعرفة طبيعتها ودرجة تحملها، وهذه الدراسة تُعد أساسية لاختيار المواد المناسبة والتصميم الهيكلي. بعد ذلك، يتم استخدام معدات ثقيلة حديثة لضمان التسوية الدقيقة، وضغط الطبقات (Compaction) بشكل مثالي لضمان عدم حدوث هبوط مستقبلي.</p>
+                    <div class="quote-box">نحن نؤمن بأن الأساس القوي هو سر بقاء الطريق لأجيال، لذا لا نتهاون في جودة طبقات التأسيس.</div>
+                    <p>أثناء التنفيذ، يتم إجراء اختبارات دورية داخل المختبرات الميدانية للتحقق من قوة تماسك الإسفلت ومقاومته للأحمال المختلفة. كما نولي أهمية خاصة لعناصر السلامة مثل تصريف مياه الأمطار ووضع الإشارات والخطوط الفسفورية التي تضمن بيئة آمنة للسائقين ليلاً ونهاراً.</p>
+                `
+            },
+            {
+                title: "دور شركات المقاولات العامة في تطوير البنية التحتية",
+                image: "images/2151317298-768x512.webp",
+                content: `
+                    <p>تُعد شركات المقاولات العامة الركيزة الأساسية في بناء وتطوير البنية التحتية التي تقوم عليها حركة الحياة اليومية والاقتصاد الوطني. فلا يمكن لأي مجتمع أن يحقق تطورًا حقيقيًا دون وجود شبكة قوية من الطرق والجسور والمرافق العامة.</p>
+                    <p>تمتلك الشركات المحترفة القدرة على إدارة المشاريع بمراحلها المختلفة بدءًا من الحفر وتجهيز الأرض، وصولاً إلى التشطيبات النهائية. وبفضل التكنولوجيا الحديثة، أصبحنا نعتمد على أنظمة متقدمة مثل برامج الـ BIM التي تساهم في رفع كفاءة الأداء وتقليل نسبة الأخطاء.</p>
+                    <div class="quote-box">التكنولوجيا ليست مجرد أداة، بل هي شريكنا لضمان دقة التنفيذ والالتزام الصارم بالمواعيد.</div>
+                    <p>ولأن المقاولات العامة تشمل تخصصات متعددة، فإن التنسيق بين الفرق الميدانية والإدارية يمثل عاملًا رئيسيًا في النجاح. نحن في أنامل الطرق نسعى دائماً لنكون رواداً في تحويل المخططات الهندسية الصعبة إلى واقع ملموس يخدم المواطن السعودي ويواكب النهضة العمرانية الشاملة.</p>
+                `
+            }
+        ];
+
+        // جلب المعرف من الرابط
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        if (articleId !== null && articlesData[articleId]) {
+            const article = articlesData[articleId];
+            document.getElementById('article-title').innerText = article.title;
+            document.getElementById('article-img').src = article.image;
+            document.getElementById('article-body').innerHTML = article.content;
+        } else {
+            document.getElementById('article-title').innerText = "المقال غير موجود";
+        }
+    </script>
+</body>
+</html>
