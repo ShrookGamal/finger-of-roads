@@ -1347,3 +1347,122 @@ header {
         gap: 10px;
     }
 }
+@media (max-width: 768px) {
+    /* --- 1. تنظيف الهيدر وتوسيط العناصر --- */
+    
+    /* إخفاء زر اتصل الآن تماماً في الموبايل */
+    .btn-call {
+        display: none !important;
+    }
+
+    /* ضبط الناف بار ليكون اللوجو والمنيو على خط واحد */
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 5% !important;
+        height: 80px !important;
+    }
+
+    /* التأكد من أن التلات شرطات (المنيو) في نفس مستوى اللوجو */
+    .menu-btn {
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .logo {
+        margin: 0 !important;
+    }
+
+    .logo span {
+        font-size: 1.1rem !important; /* صغرنا الاسم عشان ميزحمش الدنيا */
+    }
+
+    /* --- 2. ضبط سكشن الهيرو (الرئيسية) من البداية --- */
+    
+    .hero {
+        padding-top: 120px !important; /* مسافة كافية عشان الكلام يبدأ تحت الهيدر */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .hero-content {
+        padding: 0 20px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem !important; /* حجم مناسب للموبايل */
+        margin-bottom: 20px !important;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem !important;
+        margin-bottom: 35px !important;
+    }
+
+    /* --- 3. توسيط سكشن تواصل معنا (المعلومات والكارد) --- */
+    
+    .contact-wrapper {
+        flex-direction: column !important; /* العناصر تحت بعض */
+        align-items: center !important; /* توسيط السكشن ككل */
+        text-align: center !important;
+        gap: 40px !important;
+    }
+
+    .contact-info-side {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* توسيط الكلام في النص */
+    }
+
+    .info-items {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* توسيط كروت التواصل */
+    }
+
+    .info-card {
+        width: 100% !important;
+        max-width: 380px !important; /* حجم مناسب للكارت */
+        justify-content: center !important; /* توسيط المحتوى جوه الكارت */
+        margin-bottom: 15px !important;
+    }
+
+    .contact-form-side {
+        width: 100% !important;
+        max-width: 500px !important;
+    }
+
+    /* --- 4. توسيط الفوتر تماماً --- */
+    
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+
+    .footer-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* توسيط كل محتوى الفوتر */
+        margin-bottom: 30px !important;
+    }
+
+    .footer-col h3::after {
+        right: 50% !important;
+        transform: translateX(50%) !important;
+    }
+
+    .social-links, .contact-item {
+        justify-content: center !important;
+    }
+
+    .bottom-flex {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+}
